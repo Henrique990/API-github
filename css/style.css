@@ -1,0 +1,189 @@
+:root{
+    --text-color: #fff;
+
+    --profile-width: 300px;
+    --profile-height: 95vh;
+
+    --repositories-magin-left: calc(var(--profile-width) + 15px);
+}
+
+::-webkit-scrollbar {width:5px;height:5px;}
+::-webkit-scrollbar-track {background:var(--bg-color);}
+::-webkit-scrollbar-thumb {background:var(--text-color);}:root {
+  --bg-color: rgb(10, 10, 10);
+  --text-color: rgba(255, 255, 255, 0.589);
+  --blog-gray-color: rgba(180, 180, 180, 0.267);
+  --background-image: linear-gradient(90deg, rgba(10, 10, 10, 0.6), rgb(10, 10, 10, 1)), url("https://www.nextthursday.com.au/wp-content/uploads/2018/05/Dark-bg.jpg");
+  --background-background: linear-gradient(0deg, rgba(10, 10, 10, 1), rgba(10, 10, 10, 0.6)),
+    url("https://www.nextthursday.com.au/wp-content/uploads/2018/05/Dark-bg.jpg") center center fixed;
+  --height: 50vh;
+}
+
+body{
+    font-family: Rubik, Arial, Helvetica, sans-serif;
+    color: white;
+
+    background: url("../img/bg.jpg") no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.infoContainer{
+    width: 100%;
+}
+
+.profileInfo{
+    text-align: center;
+}
+
+.profilePic{
+    max-width: 500px;
+    height: 100px;
+
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+.profileUser{
+    font-size: 4ex;
+    margin: 0;
+}
+
+.profileBio{
+    margin-top: 7;
+    
+    font-size: 2.5ex;
+}
+
+a:link{ 
+    text-decoration:none; 
+} 
+
+.divRepo{
+    margin-bottom: 20px;
+    padding-left: 15px;
+
+    background-color: black;
+    opacity: 0.7;
+
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+
+    /* position: relative; */
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+    flex-direction: column
+}
+
+.divRepo:hover {
+    opacity: 1.0;
+    transition: 0.5s;
+    transform: scale(1.01);
+}
+
+.divRepo i{
+    color: var(--text-color) !important;
+}
+
+.divRepo h3{
+    color: var(--text-color) !important;
+
+    margin-bottom: 3px;
+}
+
+.divRepo p{
+    display: block;
+    color: var(--text-color) !important;
+    
+    margin-top: 0;
+    padding-bottom: 15px;
+}
+
+.infoDiv div{
+    color: var(--text-color) !important;
+
+    display: inline-block;
+    margin-right: 15px;
+}
+
+.footer{
+    width: 100%;
+    text-align: center;
+}
+
+.footer a{
+    text-decoration: underline;
+    color: gray !important;
+}
+
+/*Desktop*/
+@media only screen and (min-width: 880px){
+    html {
+        height: 100%;
+        box-sizing: border-box;
+    }
+      
+    *,
+    *:before,
+    *:after {
+        box-sizing: inherit;
+    }
+
+    body{
+        position: relative;
+        padding-bottom: 6rem;
+        min-height: 100%;
+    }
+
+    .infoContainer{
+        position: fixed;
+        float: left;
+        margin-left: 10px;
+        
+        height: var(--profile-height);
+        width: var(--profile-width);
+    }
+    
+    .profileInfo{
+        width: var(--profile-width);
+        
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+    .repoContainer{
+        height: 100%;
+    }
+
+    .repos{
+        margin-left: var(--repositories-magin-left);
+        padding: 20px;
+
+        -moz-columns: 2;
+        columns: 2;
+        
+        -moz-column-gap: 40px;
+        column-gap: 40px;
+    }
+
+    .divEmptyRepo{
+        margin-bottom: 20px;
+        height: 150px;
+    }  
+
+    .footer{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        
+        text-align: center;
+    }
+}
